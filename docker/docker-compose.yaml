@@ -1,0 +1,68 @@
+version: '3'
+
+volumes:
+  backend_data:
+    driver: local
+  keycloak_data:
+    driver: local
+
+services:
+
+  db-backend:
+    image: postgres:latest
+    volumes:
+      - backend_data:/var/lib/postgresql/data
+
+    restart: on-failure
+
+    environment:
+      POSTGRES_DB: bartos-backend-db
+      POSTGRES_USER: bartos-backend-db
+      POSTGRES_PASSWORD: bartos-backend-db123
+    ports:
+      - "8555:5432"
+    expose:
+      - "8555"
+
+  db-keycloak:
+    image: postgres:latest
+    volumes:
+      - keycloak_data:/var/lib/postgresql/data
+
+    restart: on-failure
+
+    environment:
+      POSTGRES_DB: bartos-keycloak-db
+      POSTGRES_USER: bartos-keycloak-db
+      POSTGRES_PASSWORD: bartos-keycloak-db123
+    ports:
+      - "8554:5432"
+
+  backend:
+    image: "backend/smarthome-jvm"
+    restart: on-failure
+
+    depends_on:
+      - db-backend
+      - keycloak
+    links:
+      - keycloak
+    ports:
+      - "8888:8888"
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: db-keycloak
+      DB_SCHEMA: public
+      DB_DATABASE: bartos-keycloak-db
+      DB_USER: bartos-keycloak-db
+      DB_PASSWORD: bartos-keycloak-db123
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: PassAdmin
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db-keycloak
