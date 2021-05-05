@@ -19,6 +19,8 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.HashSet;
@@ -28,6 +30,9 @@ import java.util.Set;
 @Entity
 @Table(name = "HOME")
 @Cacheable
+@NamedQueries({
+        @NamedQuery(name = "getHomeByName", query = "select home from HomeEntity home where home.name=:name")
+})
 public class HomeEntity extends PanacheEntityBase {
 
     @Id

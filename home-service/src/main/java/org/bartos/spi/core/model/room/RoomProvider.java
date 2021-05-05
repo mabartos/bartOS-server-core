@@ -1,4 +1,4 @@
-package org.bartos.spi.core.model;
+package org.bartos.spi.core.model.room;
 
 import org.bartos.model.RoomModel;
 import org.bartos.spi.common.Provider;

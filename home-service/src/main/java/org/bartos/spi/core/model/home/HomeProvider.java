@@ -1,4 +1,4 @@
-package org.bartos.spi.core.model;
+package org.bartos.spi.core.model.home;
 
 import org.bartos.model.HomeModel;
 import org.bartos.spi.common.Provider;

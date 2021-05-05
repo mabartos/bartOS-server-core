@@ -4,16 +4,19 @@ import org.bartos.model.HomeInvitationModel;
 import org.bartos.model.HomeModel;
 import org.bartos.model.RoomModel;
 import org.bartos.model.jpa.entities.home.HomeEntity;
+import org.bartos.spi.core.BartHomeSession;
 
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
 //TODO add session
 public class HomeAdapter implements HomeModel {
+    private final BartHomeSession session;
     protected EntityManager em;
     protected HomeEntity home;
 
-    public HomeAdapter(EntityManager em, HomeEntity home) {
+    public HomeAdapter(BartHomeSession session, EntityManager em, HomeEntity home) {
+        this.session = session;
         this.em = em;
         this.home = home;
     }

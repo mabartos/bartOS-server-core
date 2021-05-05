@@ -4,16 +4,19 @@ import org.bartos.model.HomeModel;
 import org.bartos.model.RoomModel;
 import org.bartos.model.jpa.entities.room.RoomEntity;
 import org.bartos.model.jpa.entities.room.RoomType;
+import org.bartos.spi.core.BartHomeSession;
 
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
 //TODO
 public class RoomAdapter implements RoomModel {
+    private final BartHomeSession session;
     protected RoomEntity room;
     protected EntityManager em;
 
-    public RoomAdapter(EntityManager em, RoomEntity room) {
+    public RoomAdapter(BartHomeSession session, EntityManager em, RoomEntity room) {
+        this.session = session;
         this.em = em;
         this.room = room;
     }
