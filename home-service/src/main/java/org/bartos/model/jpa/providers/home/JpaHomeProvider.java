@@ -1,4 +1,4 @@
-package org.bartos.model.jpa;
+package org.bartos.model.jpa.providers.home;
 
 import org.bartos.model.HomeModel;
 import org.bartos.model.jpa.adapters.home.HomeAdapter;
@@ -8,6 +8,7 @@ import org.bartos.spi.core.model.home.HomeProvider;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import java.lang.reflect.Type;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -23,7 +24,6 @@ public class JpaHomeProvider implements HomeProvider {
 
     @Override
     public void close() {
-
     }
 
     @Override
@@ -59,6 +59,8 @@ public class JpaHomeProvider implements HomeProvider {
 
     @Override
     public Stream<HomeModel> getHomesStream() {
+        TypedQuery<HomeEntity> query=em.createNamedQuery("get")
+
         return Stream.of();
     }
 

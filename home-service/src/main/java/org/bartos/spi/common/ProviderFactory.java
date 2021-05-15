@@ -1,8 +1,8 @@
 package org.bartos.spi.common;
 
-public interface ProviderFactory<T extends Provider> {
+public interface ProviderFactory<T extends Provider, Session extends BartSession> {
 
-    <S extends BartSession> T create(S session);
+    T create(Session session);
 
     String getID();
 

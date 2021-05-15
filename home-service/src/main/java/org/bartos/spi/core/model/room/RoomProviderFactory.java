@@ -1,6 +1,6 @@
 package org.bartos.spi.core.model.room;
 
-import org.bartos.spi.common.ProviderFactory;
+import org.bartos.spi.core.DefaultProviderFactory;
 
-public interface RoomProviderFactory extends ProviderFactory<RoomProvider> {
+public interface RoomProviderFactory extends DefaultProviderFactory<RoomProvider> {
 }

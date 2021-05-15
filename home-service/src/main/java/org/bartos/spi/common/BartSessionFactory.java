@@ -9,9 +9,9 @@ public interface BartSessionFactory {
 
     Spi getSpi(Class<? extends Provider> providerClass);
 
-    <T extends Provider> ProviderFactory<T> getProviderFactory(Class<T> clazz);
+    <T extends Provider> ProviderFactory<T, ? extends BartSession> getProviderFactory(Class<T> clazz);
 
-    <T extends Provider> ProviderFactory<T> getProviderFactory(Class<T> clazz, String id);
+    <T extends Provider> ProviderFactory<T, ? extends BartSession> getProviderFactory(Class<T> clazz, String id);
 
     void close();
 }

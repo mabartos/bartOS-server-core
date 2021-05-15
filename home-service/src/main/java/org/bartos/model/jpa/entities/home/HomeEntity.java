@@ -31,6 +31,7 @@ import java.util.Set;
 @Table(name = "HOME")
 @Cacheable
 @NamedQueries({
+        @NamedQuery(name = "getAllHomeIDs", query = "select home.id from HomeEntity home"),
         @NamedQuery(name = "getHomeByName", query = "select home from HomeEntity home where home.name=:name")
 })
 public class HomeEntity extends PanacheEntityBase {

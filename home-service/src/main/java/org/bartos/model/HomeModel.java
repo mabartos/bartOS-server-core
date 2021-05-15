@@ -13,40 +13,42 @@ public interface HomeModel {
     /* USERS */
     Stream<String> getUsers();
 
-    void addUser(String userID);
+    boolean addUser(String userID);
 
-    void removeUser(String userID);
+    boolean removeUser(String userID);
 
-    Long getUsersCount();
+    Integer getUsersCount();
 
     /* DEVICES */
     Stream<String> getUnassignedDevices();
 
-    void addUnassignedDevice(String deviceID);
+    boolean addUnassignedDevice(String deviceID);
 
-    void removeUnassignedDevice(String deviceID);
+    boolean removeUnassignedDevice(String deviceID);
 
-    Long getUnassignedDevicesCount();
+    Integer getUnassignedDevicesCount();
 
     /* ROOMS */
     Stream<RoomModel> getRooms();
 
     RoomModel getRoomByID(String roomID);
 
-    void addRoom(RoomModel room);
+    RoomModel addRoom(String roomID);
 
-    void removeRoom(String roomID);
+    boolean removeRoom(String roomID);
 
-    Long getRoomsCount();
+    Integer getRoomsCount();
 
     /* INVITATIONS */
     Stream<HomeInvitationModel> getInvitations();
 
     HomeInvitationModel getInvitationByID(String invitationID);
 
-    void addInvitation(String invitationID);
+    HomeInvitationModel addInvitation(String invitationID);
 
-    void removeInvitation(String invitationID);
+    HomeInvitationModel addInvitation(HomeInvitationModel invitation);
 
-    Long getInvitationsCount();
+    boolean removeInvitation(String invitationID);
+
+    Integer getInvitationsCount();
 }

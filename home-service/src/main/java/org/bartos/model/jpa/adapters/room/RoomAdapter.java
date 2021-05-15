@@ -9,15 +9,16 @@ import org.bartos.spi.core.BartHomeSession;
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
-//TODO
 public class RoomAdapter implements RoomModel {
     private final BartHomeSession session;
+    protected HomeModel home;
     protected RoomEntity room;
     protected EntityManager em;
 
-    public RoomAdapter(BartHomeSession session, EntityManager em, RoomEntity room) {
+    public RoomAdapter(BartHomeSession session, EntityManager em, HomeModel home, RoomEntity room) {
         this.session = session;
         this.em = em;
+        this.home = home;
         this.room = room;
     }
 
@@ -50,12 +51,7 @@ public class RoomAdapter implements RoomModel {
 
     @Override
     public HomeModel getHome() {
-        return null;
-    }
-
-    @Override
-    public void setHome(HomeModel home) {
-
+        return home;
     }
 
     @Override
@@ -64,19 +60,25 @@ public class RoomAdapter implements RoomModel {
     }
 
     @Override
-    public void addDevice(String deviceID) {
+    public boolean addDevice(String deviceID) {
         if (room.getDevices().add(deviceID)) {
             em.flush();
+            return true;
         }
+        return false;
     }
 
     @Override
-    public void removeDevice(String deviceID) {
-
+    public boolean removeDevice(String deviceID) {
+        if (room.getDevices().remove(deviceID)) {
+            em.flush();
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public Long getDevicesCount() {
-        return (long) room.getDevices().size();
+    public Integer getDevicesCount() {
+        return room.getDevices().size();
     }
 }

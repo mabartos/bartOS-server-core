@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package home;
+
+option java_multiple_files = true;
+option java_package = "org.bartos.core.protobuf";
+option java_outer_classname = "HomeProto";
+option optimize_for = SPEED;
+
+message HomeDTO {
+    string id = 1;
+    string name = 2;
+    repeated RoomDTO room = 3;
+    repeated string users = 4;
+    repeated string devices = 5;
+
+    message HomeInvitationDTO {
+        string id = 1;
+        string issuer = 2;
+        string receiver = 3;
+        HomeDTO home = 4;
+    }
+
+    repeated HomeInvitationDTO invitations = 6;
+}
+
+message RoomDTO {
+    string id = 1;
+    string name = 2;
+
+    enum RoomType {
+        NONE = 0;
+        KITCHEN = 1;
+        BEDROOM = 2;
+        BATHROOM = 3;
+        LIVING_ROOM = 4;
+        GARAGE = 5;
+        OTHER = 6;
+    }
+    RoomType type = 3;
+    string home_id = 4;
+    repeated string devices = 5;
+}
+
+
+
+

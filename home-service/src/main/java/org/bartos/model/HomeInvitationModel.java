@@ -13,6 +13,4 @@ public interface HomeInvitationModel {
     void setReceiver(String receiverID);
 
     HomeModel getHome();
-
-    void setHome(HomeModel home);
 }

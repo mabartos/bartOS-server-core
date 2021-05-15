@@ -18,14 +18,12 @@ public interface RoomModel {
 
     HomeModel getHome();
 
-    void setHome(HomeModel home);
-
     /* DEVICES */
     Stream<String> getDevices();
 
-    void addDevice(String deviceID);
+    boolean addDevice(String deviceID);
 
-    void removeDevice(String deviceID);
+    boolean removeDevice(String deviceID);
 
-    Long getDevicesCount();
+    Integer getDevicesCount();
 }

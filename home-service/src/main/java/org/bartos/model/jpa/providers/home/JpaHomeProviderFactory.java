@@ -1,6 +1,6 @@
-package org.bartos.model.jpa;
+package org.bartos.model.jpa.providers.home;
 
-import org.bartos.spi.common.BartSession;
+import org.bartos.spi.core.BartHomeSession;
 import org.bartos.spi.core.model.home.HomeProvider;
 import org.bartos.spi.core.model.home.HomeProviderFactory;
 
@@ -13,9 +13,8 @@ public class JpaHomeProviderFactory implements HomeProviderFactory {
         this.em = em;
     }
 
-
     @Override
-    public <S extends BartSession> HomeProvider create(S session) {
+    public HomeProvider create(BartHomeSession session) {
         return new JpaHomeProvider(session, em);
     }
 

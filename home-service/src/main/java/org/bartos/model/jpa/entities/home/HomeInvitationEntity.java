@@ -20,7 +20,7 @@ import java.util.Objects;
 @Table(name = "HOME_INVITATION")
 @Cacheable
 @NamedQueries({
-        @NamedQuery(name = "getHomesInvitations", query = "select inv from HomeInvitationEntity inv join fetch inv.receiver join fetch inv.home where inv.home.id=:homeID"),
+        @NamedQuery(name = "getHomesInvitations", query = "select inv from HomeInvitationEntity inv join fetch inv.home where inv.home.id=:homeID"),
         @NamedQuery(name = "deleteHomeInvitations", query = "delete from HomeInvitationEntity where home.id=:homeID")
 })
 public class HomeInvitationEntity extends PanacheEntityBase {

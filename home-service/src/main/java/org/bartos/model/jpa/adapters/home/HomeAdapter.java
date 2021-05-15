@@ -9,7 +9,6 @@ import org.bartos.spi.core.BartHomeSession;
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
-//TODO add session
 public class HomeAdapter implements HomeModel {
     private final BartHomeSession session;
     protected EntityManager em;
@@ -43,22 +42,26 @@ public class HomeAdapter implements HomeModel {
     }
 
     @Override
-    public void addUser(String userID) {
+    public boolean addUser(String userID) {
         if (home.getUsers().add(userID)) {
             em.flush();
+            return true;
         }
+        return false;
     }
 
     @Override
-    public void removeUser(String userID) {
+    public boolean removeUser(String userID) {
         if (home.getUsers().remove(userID)) {
             em.flush();
+            return true;
         }
+        return false;
     }
 
     @Override
-    public Long getUsersCount() {
-        return (long) home.getUsers().size();
+    public Integer getUsersCount() {
+        return home.getUsers().size();
     }
 
     @Override
@@ -67,71 +70,80 @@ public class HomeAdapter implements HomeModel {
     }
 
     @Override
-    public void addUnassignedDevice(String deviceID) {
+    public boolean addUnassignedDevice(String deviceID) {
         if (home.getUnassignedDevices().add(deviceID)) {
             em.flush();
+            return true;
         }
+        return false;
     }
 
     @Override
-    public void removeUnassignedDevice(String deviceID) {
+    public boolean removeUnassignedDevice(String deviceID) {
         if (home.getUnassignedDevices().remove(deviceID)) {
             em.flush();
+            return true;
         }
+        return false;
     }
 
     @Override
-    public Long getUnassignedDevicesCount() {
-        return (long) home.getUnassignedDevices().size();
+    public Integer getUnassignedDevicesCount() {
+        return home.getUnassignedDevices().size();
     }
 
     @Override
     public Stream<RoomModel> getRooms() {
-        return null;
+        return session.rooms().getRoomsStream(this);
     }
 
     @Override
     public RoomModel getRoomByID(String roomID) {
-        return null;
+        return session.rooms().getRoomByID(this, roomID);
     }
 
     @Override
-    public void addRoom(RoomModel room) {
-
+    public RoomModel addRoom(String roomID) {
+        return session.rooms().addRoom(this, roomID);
     }
 
     @Override
-    public void removeRoom(String roomID) {
-
+    public boolean removeRoom(String roomID) {
+        return session.rooms().removeRoom(this, roomID);
     }
 
     @Override
-    public Long getRoomsCount() {
-        return (long) home.getRooms().size();
+    public Integer getRoomsCount() {
+        return session.rooms().getCountOfRooms(this);
     }
 
     @Override
     public Stream<HomeInvitationModel> getInvitations() {
-        return null;
+        return session.invitations().getInvitations(this);
     }
 
     @Override
     public HomeInvitationModel getInvitationByID(String invitationID) {
-        return null;
+        return session.invitations().getInvitationsByID(this, invitationID);
     }
 
     @Override
-    public void addInvitation(String invitationID) {
-
+    public HomeInvitationModel addInvitation(String invitationID) {
+        return session.invitations().addInvitation(this, invitationID);
     }
 
     @Override
-    public void removeInvitation(String invitationID) {
-
+    public HomeInvitationModel addInvitation(HomeInvitationModel invitation) {
+        return session.invitations().addInvitation(this, invitation);
     }
 
     @Override
-    public Long getInvitationsCount() {
-        return (long) home.getInvitations().size();
+    public boolean removeInvitation(String invitationID) {
+        return session.invitations().removeInvitation(this, invitationID);
+    }
+
+    @Override
+    public Integer getInvitationsCount() {
+        return session.invitations().getInvitationsCount(this);
     }
 }
