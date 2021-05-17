@@ -9,6 +9,7 @@ package org.bartos.model.jpa.entities.home;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import org.bartos.model.jpa.entities.room.RoomEntity;
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -46,18 +47,22 @@ public class HomeEntity extends PanacheEntityBase {
 
     @ElementCollection
     @LazyCollection(LazyCollectionOption.FALSE)
+    @BatchSize(size = 20)
     protected Set<String> unassignedDevices;
 
     @ElementCollection
     @LazyCollection(LazyCollectionOption.FALSE)
+    @BatchSize(size = 20)
     protected Set<String> users;
 
     @OneToMany(targetEntity = RoomEntity.class, mappedBy = "home", cascade = CascadeType.ALL, orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
+    @BatchSize(size = 20)
     protected Set<RoomEntity> rooms;
 
     @OneToMany(targetEntity = HomeInvitationEntity.class, mappedBy = "home", cascade = CascadeType.ALL, orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
+    @BatchSize(size = 20)
     protected Set<HomeInvitationEntity> invitations;
 
     public String getName() {

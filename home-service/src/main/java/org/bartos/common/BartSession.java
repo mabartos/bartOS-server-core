@@ -1,10 +1,13 @@
-package org.bartos.spi.common;
+package org.bartos.common;
 
+import javax.persistence.EntityManager;
 import java.util.Set;
 
 public interface BartSession {
 
-    <T extends Provider> T getProvider(Class<T> clazz);
+    default <T extends Provider> T getProvider(Class<T> clazz) {
+        return getProvider(clazz, null);
+    }
 
     <T extends Provider> T getProvider(Class<T> clazz, String id);
 
@@ -13,4 +16,6 @@ public interface BartSession {
     void close();
 
     BartSessionFactory getSessionFactory();
+
+    EntityManager getEntityManager();
 }

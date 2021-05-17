@@ -1,14 +1,13 @@
 package org.bartos.model.jpa.providers.home;
 
 import org.bartos.model.HomeModel;
-import org.bartos.model.jpa.adapters.home.HomeAdapter;
+import org.bartos.model.jpa.adapters.home.JpaHomeAdapter;
 import org.bartos.model.jpa.entities.home.HomeEntity;
-import org.bartos.spi.core.BartHomeSession;
-import org.bartos.spi.core.model.home.HomeProvider;
+import org.bartos.spi.BartHomeSession;
+import org.bartos.spi.model.home.HomeProvider;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import java.lang.reflect.Type;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -17,9 +16,9 @@ public class JpaHomeProvider implements HomeProvider {
     private final BartHomeSession session;
     protected EntityManager em;
 
-    public JpaHomeProvider(BartHomeSession session, EntityManager em) {
+    public JpaHomeProvider(BartHomeSession session) {
         this.session = session;
-        this.em = em;
+        this.em = session.getEntityManager();
     }
 
     @Override
@@ -38,14 +37,14 @@ public class JpaHomeProvider implements HomeProvider {
         entity.setName(name);
         em.persist(entity);
         em.flush();
-        return new HomeAdapter(session, em, entity);
+        return new JpaHomeAdapter(session, entity);
     }
 
     @Override
     public HomeModel getHomeByID(String homeID) {
         HomeEntity entity = em.find(HomeEntity.class, homeID);
         if (entity == null) return null;
-        return new HomeAdapter(session, em, entity);
+        return new JpaHomeAdapter(session, entity);
     }
 
     @Override
@@ -54,14 +53,14 @@ public class JpaHomeProvider implements HomeProvider {
         query.setParameter("name", name);
         HomeEntity entity = query.getSingleResult();
         if (entity == null) return null;
-        return new HomeAdapter(session, em, entity);
+        return new JpaHomeAdapter(session, entity);
     }
 
     @Override
     public Stream<HomeModel> getHomesStream() {
-        TypedQuery<HomeEntity> query=em.createNamedQuery("get")
-
-        return Stream.of();
+        TypedQuery<HomeEntity> query = em.createNamedQuery("getAllHomeIDs", HomeEntity.class);
+        Stream<HomeEntity> entities = query.getResultStream();
+        return entities.map(f -> session.homes().getHomeByID(f.getID()));
     }
 
     @Override

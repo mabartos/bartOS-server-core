@@ -34,12 +34,12 @@ public interface HomeDTOOrBuilder extends
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
-  java.util.List<org.bartos.core.protobuf.RoomDTO> 
+  java.util.List<RoomDTO>
       getRoomList();
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
-  org.bartos.core.protobuf.RoomDTO getRoom(int index);
+  RoomDTO getRoom(int index);
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
@@ -47,12 +47,12 @@ public interface HomeDTOOrBuilder extends
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
-  java.util.List<? extends org.bartos.core.protobuf.RoomDTOOrBuilder> 
+  java.util.List<? extends RoomDTOOrBuilder>
       getRoomOrBuilderList();
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
-  org.bartos.core.protobuf.RoomDTOOrBuilder getRoomOrBuilder(
+  RoomDTOOrBuilder getRoomOrBuilder(
       int index);
 
   /**
@@ -108,12 +108,12 @@ public interface HomeDTOOrBuilder extends
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
-  java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> 
+  java.util.List<HomeDTO.HomeInvitationDTO>
       getInvitationsList();
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
-  org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getInvitations(int index);
+  HomeDTO.HomeInvitationDTO getInvitations(int index);
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
@@ -121,11 +121,11 @@ public interface HomeDTOOrBuilder extends
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
-  java.util.List<? extends org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder> 
+  java.util.List<? extends HomeDTO.HomeInvitationDTOOrBuilder>
       getInvitationsOrBuilderList();
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
-  org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
+  HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
       int index);
 }

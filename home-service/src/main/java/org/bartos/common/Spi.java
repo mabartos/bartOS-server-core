@@ -1,4 +1,4 @@
-package org.bartos.spi.common;
+package org.bartos.common;
 
 public interface Spi {
     String getName();

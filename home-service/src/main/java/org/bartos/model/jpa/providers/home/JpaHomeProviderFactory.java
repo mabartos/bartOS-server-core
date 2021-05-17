@@ -1,26 +1,20 @@
 package org.bartos.model.jpa.providers.home;
 
-import org.bartos.spi.core.BartHomeSession;
-import org.bartos.spi.core.model.home.HomeProvider;
-import org.bartos.spi.core.model.home.HomeProviderFactory;
-
-import javax.persistence.EntityManager;
+import org.bartos.spi.BartHomeSession;
+import org.bartos.spi.model.home.HomeProvider;
+import org.bartos.spi.model.home.HomeProviderFactory;
 
 public class JpaHomeProviderFactory implements HomeProviderFactory {
-    private EntityManager em;
-
-    public JpaHomeProviderFactory(EntityManager em) {
-        this.em = em;
-    }
-
+    public static String FACTORY_ID = "JPA-HOME-FACTORY";
+    
     @Override
     public HomeProvider create(BartHomeSession session) {
-        return new JpaHomeProvider(session, em);
+        return new JpaHomeProvider(session);
     }
 
     @Override
     public String getID() {
-        return null;
+        return FACTORY_ID;
     }
 
     @Override

@@ -1,7 +1,7 @@
-package org.bartos.spi.core.model.home;
+package org.bartos.spi.model.home;
 
+import org.bartos.common.Provider;
 import org.bartos.model.HomeModel;
-import org.bartos.spi.common.Provider;
 
 import java.util.stream.Stream;
 

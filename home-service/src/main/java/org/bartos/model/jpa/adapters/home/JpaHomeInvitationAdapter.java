@@ -3,50 +3,58 @@ package org.bartos.model.jpa.adapters.home;
 import org.bartos.model.HomeInvitationModel;
 import org.bartos.model.HomeModel;
 import org.bartos.model.jpa.entities.home.HomeInvitationEntity;
-import org.bartos.spi.core.BartHomeSession;
+import org.bartos.common.jpa.JpaModel;
+import org.bartos.spi.BartHomeSession;
 
 import javax.persistence.EntityManager;
 
-public class HomeInvitationAdapter implements HomeInvitationModel {
+public class JpaHomeInvitationAdapter implements HomeInvitationModel, JpaModel<HomeInvitationEntity> {
     private final BartHomeSession session;
     protected EntityManager em;
     protected HomeModel home;
     protected HomeInvitationEntity invitationEntity;
 
-    public HomeInvitationAdapter(BartHomeSession session, EntityManager em, HomeModel home, HomeInvitationEntity invitationEntity) {
+    public JpaHomeInvitationAdapter(BartHomeSession session, HomeModel home, HomeInvitationEntity invitationEntity) {
         this.session = session;
-        this.em = em;
+        this.em = session.getEntityManager();
         this.home = home;
         this.invitationEntity = invitationEntity;
     }
 
     @Override
     public String getID() {
-        return null;
+        return invitationEntity.getID();
     }
 
     @Override
     public String getIssuer() {
-        return null;
+        return invitationEntity.getIssuer();
     }
 
     @Override
     public void setIssuer(String issuerID) {
-
+        invitationEntity.setIssuer(issuerID);
+        em.flush();
     }
 
     @Override
     public String getReceiver() {
-        return null;
+        return invitationEntity.getReceiver();
     }
 
     @Override
     public void setReceiver(String receiverID) {
-
+        invitationEntity.setReceiver(receiverID);
+        em.flush();
     }
 
     @Override
     public HomeModel getHome() {
-        return null;
+        return home;
+    }
+
+    @Override
+    public HomeInvitationEntity getEntity() {
+        return invitationEntity;
     }
 }

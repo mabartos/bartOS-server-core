@@ -4,19 +4,20 @@ import org.bartos.model.HomeInvitationModel;
 import org.bartos.model.HomeModel;
 import org.bartos.model.RoomModel;
 import org.bartos.model.jpa.entities.home.HomeEntity;
-import org.bartos.spi.core.BartHomeSession;
+import org.bartos.common.jpa.JpaModel;
+import org.bartos.spi.BartHomeSession;
 
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
-public class HomeAdapter implements HomeModel {
+public class JpaHomeAdapter implements HomeModel, JpaModel<HomeEntity> {
     private final BartHomeSession session;
     protected EntityManager em;
     protected HomeEntity home;
 
-    public HomeAdapter(BartHomeSession session, EntityManager em, HomeEntity home) {
+    public JpaHomeAdapter(BartHomeSession session, HomeEntity home) {
         this.session = session;
-        this.em = em;
+        this.em = session.getEntityManager();
         this.home = home;
     }
 
@@ -128,13 +129,8 @@ public class HomeAdapter implements HomeModel {
     }
 
     @Override
-    public HomeInvitationModel addInvitation(String invitationID) {
-        return session.invitations().addInvitation(this, invitationID);
-    }
-
-    @Override
-    public HomeInvitationModel addInvitation(HomeInvitationModel invitation) {
-        return session.invitations().addInvitation(this, invitation);
+    public HomeInvitationModel createInvitation(HomeInvitationModel invitation) {
+        return session.invitations().createInvitation(this, invitation);
     }
 
     @Override
@@ -145,5 +141,10 @@ public class HomeAdapter implements HomeModel {
     @Override
     public Integer getInvitationsCount() {
         return session.invitations().getInvitationsCount(this);
+    }
+
+    @Override
+    public HomeEntity getEntity() {
+        return home;
     }
 }

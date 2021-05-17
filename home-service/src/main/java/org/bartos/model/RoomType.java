@@ -1,4 +1,4 @@
-package org.bartos.model.jpa.entities.room;
+package org.bartos.model;
 
 public enum RoomType {
     NONE,

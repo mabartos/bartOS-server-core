@@ -40,7 +40,7 @@ public interface RoomDTOOrBuilder extends
    * <code>.home.RoomDTO.RoomType type = 3;</code>
    * @return The type.
    */
-  org.bartos.core.protobuf.RoomDTO.RoomType getType();
+  RoomDTO.RoomType getType();
 
   /**
    * <code>string home_id = 4;</code>

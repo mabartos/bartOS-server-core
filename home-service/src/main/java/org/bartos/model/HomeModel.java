@@ -44,9 +44,7 @@ public interface HomeModel {
 
     HomeInvitationModel getInvitationByID(String invitationID);
 
-    HomeInvitationModel addInvitation(String invitationID);
-
-    HomeInvitationModel addInvitation(HomeInvitationModel invitation);
+    HomeInvitationModel createInvitation(HomeInvitationModel invitation);
 
     boolean removeInvitation(String invitationID);
 

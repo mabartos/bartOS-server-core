@@ -1,23 +1,24 @@
 package org.bartos.model.jpa.adapters.room;
 
+import org.bartos.common.jpa.JpaModel;
 import org.bartos.model.HomeModel;
 import org.bartos.model.RoomModel;
+import org.bartos.model.RoomType;
 import org.bartos.model.jpa.entities.room.RoomEntity;
-import org.bartos.model.jpa.entities.room.RoomType;
-import org.bartos.spi.core.BartHomeSession;
+import org.bartos.spi.BartHomeSession;
 
 import javax.persistence.EntityManager;
 import java.util.stream.Stream;
 
-public class RoomAdapter implements RoomModel {
+public class JpaRoomAdapter implements RoomModel, JpaModel<RoomEntity> {
     private final BartHomeSession session;
     protected HomeModel home;
     protected RoomEntity room;
     protected EntityManager em;
 
-    public RoomAdapter(BartHomeSession session, EntityManager em, HomeModel home, RoomEntity room) {
+    public JpaRoomAdapter(BartHomeSession session, HomeModel home, RoomEntity room) {
         this.session = session;
-        this.em = em;
+        this.em = session.getEntityManager();
         this.home = home;
         this.room = room;
     }
@@ -80,5 +81,10 @@ public class RoomAdapter implements RoomModel {
     @Override
     public Integer getDevicesCount() {
         return room.getDevices().size();
+    }
+
+    @Override
+    public RoomEntity getEntity() {
+        return room;
     }
 }

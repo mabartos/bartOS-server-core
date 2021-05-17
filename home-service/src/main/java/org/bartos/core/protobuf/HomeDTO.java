@@ -69,11 +69,11 @@ private static final long serialVersionUID = 0L;
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              room_ = new java.util.ArrayList<org.bartos.core.protobuf.RoomDTO>();
+              room_ = new java.util.ArrayList<RoomDTO>();
               mutable_bitField0_ |= 0x00000001;
             }
             room_.add(
-                input.readMessage(org.bartos.core.protobuf.RoomDTO.parser(), extensionRegistry));
+                input.readMessage(RoomDTO.parser(), extensionRegistry));
             break;
           }
           case 34: {
@@ -96,11 +96,11 @@ private static final long serialVersionUID = 0L;
           }
           case 50: {
             if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              invitations_ = new java.util.ArrayList<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO>();
+              invitations_ = new java.util.ArrayList<HomeDTO.HomeInvitationDTO>();
               mutable_bitField0_ |= 0x00000008;
             }
             invitations_.add(
-                input.readMessage(org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.parser(), extensionRegistry));
+                input.readMessage(HomeDTO.HomeInvitationDTO.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -136,15 +136,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_descriptor;
+    return HomeProto.internal_static_home_HomeDTO_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_fieldAccessorTable
+    return HomeProto.internal_static_home_HomeDTO_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.bartos.core.protobuf.HomeDTO.class, org.bartos.core.protobuf.HomeDTO.Builder.class);
+            HomeDTO.class, HomeDTO.Builder.class);
   }
 
   public interface HomeInvitationDTOOrBuilder extends
@@ -196,11 +196,11 @@ private static final long serialVersionUID = 0L;
      * <code>.home.HomeDTO home = 4;</code>
      * @return The home.
      */
-    org.bartos.core.protobuf.HomeDTO getHome();
+    HomeDTO getHome();
     /**
      * <code>.home.HomeDTO home = 4;</code>
      */
-    org.bartos.core.protobuf.HomeDTOOrBuilder getHomeOrBuilder();
+    HomeDTOOrBuilder getHomeOrBuilder();
   }
   /**
    * Protobuf type {@code home.HomeDTO.HomeInvitationDTO}
@@ -269,11 +269,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 34: {
-              org.bartos.core.protobuf.HomeDTO.Builder subBuilder = null;
+              HomeDTO.Builder subBuilder = null;
               if (home_ != null) {
                 subBuilder = home_.toBuilder();
               }
-              home_ = input.readMessage(org.bartos.core.protobuf.HomeDTO.parser(), extensionRegistry);
+              home_ = input.readMessage(HomeDTO.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(home_);
                 home_ = subBuilder.buildPartial();
@@ -302,15 +302,15 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
+      return HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_fieldAccessorTable
+      return HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.class, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder.class);
+              HomeDTO.HomeInvitationDTO.class, HomeDTO.HomeInvitationDTO.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -428,7 +428,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HOME_FIELD_NUMBER = 4;
-    private org.bartos.core.protobuf.HomeDTO home_;
+    private HomeDTO home_;
     /**
      * <code>.home.HomeDTO home = 4;</code>
      * @return Whether the home field is set.
@@ -442,14 +442,14 @@ private static final long serialVersionUID = 0L;
      * @return The home.
      */
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTO getHome() {
-      return home_ == null ? org.bartos.core.protobuf.HomeDTO.getDefaultInstance() : home_;
+    public HomeDTO getHome() {
+      return home_ == null ? HomeDTO.getDefaultInstance() : home_;
     }
     /**
      * <code>.home.HomeDTO home = 4;</code>
      */
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTOOrBuilder getHomeOrBuilder() {
+    public HomeDTOOrBuilder getHomeOrBuilder() {
       return getHome();
     }
 
@@ -511,10 +511,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO)) {
+      if (!(obj instanceof HomeDTO.HomeInvitationDTO)) {
         return super.equals(obj);
       }
-      org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO other = (org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO) obj;
+      HomeDTO.HomeInvitationDTO other = (HomeDTO.HomeInvitationDTO) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -553,69 +553,69 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(byte[] data)
+    public static HomeDTO.HomeInvitationDTO parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(java.io.InputStream input)
+    public static HomeDTO.HomeInvitationDTO parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseDelimitedFrom(java.io.InputStream input)
+    public static HomeDTO.HomeInvitationDTO parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseDelimitedFrom(
+    public static HomeDTO.HomeInvitationDTO parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parseFrom(
+    public static HomeDTO.HomeInvitationDTO parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO prototype) {
+    public static Builder newBuilder(HomeDTO.HomeInvitationDTO prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -649,18 +649,18 @@ private static final long serialVersionUID = 0L;
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:home.HomeDTO.HomeInvitationDTO)
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder {
+        HomeDTO.HomeInvitationDTOOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
+        return HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_fieldAccessorTable
+        return HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.class, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder.class);
+                HomeDTO.HomeInvitationDTO.class, HomeDTO.HomeInvitationDTO.Builder.class);
       }
 
       // Construct using org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.newBuilder()
@@ -699,17 +699,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
+        return HomeProto.internal_static_home_HomeDTO_HomeInvitationDTO_descriptor;
       }
 
       @java.lang.Override
-      public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getDefaultInstanceForType() {
-        return org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.getDefaultInstance();
+      public HomeDTO.HomeInvitationDTO getDefaultInstanceForType() {
+        return HomeDTO.HomeInvitationDTO.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO build() {
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO result = buildPartial();
+      public HomeDTO.HomeInvitationDTO build() {
+        HomeDTO.HomeInvitationDTO result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -717,8 +717,8 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO buildPartial() {
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO result = new org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO(this);
+      public HomeDTO.HomeInvitationDTO buildPartial() {
+        HomeDTO.HomeInvitationDTO result = new HomeDTO.HomeInvitationDTO(this);
         result.id_ = id_;
         result.issuer_ = issuer_;
         result.receiver_ = receiver_;
@@ -765,16 +765,16 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO) {
-          return mergeFrom((org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO)other);
+        if (other instanceof HomeDTO.HomeInvitationDTO) {
+          return mergeFrom((HomeDTO.HomeInvitationDTO)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO other) {
-        if (other == org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.getDefaultInstance()) return this;
+      public Builder mergeFrom(HomeDTO.HomeInvitationDTO other) {
+        if (other == HomeDTO.HomeInvitationDTO.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -805,11 +805,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO parsedMessage = null;
+        HomeDTO.HomeInvitationDTO parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO) e.getUnfinishedMessage();
+          parsedMessage = (HomeDTO.HomeInvitationDTO) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1047,9 +1047,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private org.bartos.core.protobuf.HomeDTO home_;
+      private HomeDTO home_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.bartos.core.protobuf.HomeDTO, org.bartos.core.protobuf.HomeDTO.Builder, org.bartos.core.protobuf.HomeDTOOrBuilder> homeBuilder_;
+              HomeDTO, HomeDTO.Builder, HomeDTOOrBuilder> homeBuilder_;
       /**
        * <code>.home.HomeDTO home = 4;</code>
        * @return Whether the home field is set.
@@ -1061,9 +1061,9 @@ private static final long serialVersionUID = 0L;
        * <code>.home.HomeDTO home = 4;</code>
        * @return The home.
        */
-      public org.bartos.core.protobuf.HomeDTO getHome() {
+      public HomeDTO getHome() {
         if (homeBuilder_ == null) {
-          return home_ == null ? org.bartos.core.protobuf.HomeDTO.getDefaultInstance() : home_;
+          return home_ == null ? HomeDTO.getDefaultInstance() : home_;
         } else {
           return homeBuilder_.getMessage();
         }
@@ -1071,7 +1071,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.home.HomeDTO home = 4;</code>
        */
-      public Builder setHome(org.bartos.core.protobuf.HomeDTO value) {
+      public Builder setHome(HomeDTO value) {
         if (homeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
        * <code>.home.HomeDTO home = 4;</code>
        */
       public Builder setHome(
-          org.bartos.core.protobuf.HomeDTO.Builder builderForValue) {
+          HomeDTO.Builder builderForValue) {
         if (homeBuilder_ == null) {
           home_ = builderForValue.build();
           onChanged();
@@ -1101,11 +1101,11 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.home.HomeDTO home = 4;</code>
        */
-      public Builder mergeHome(org.bartos.core.protobuf.HomeDTO value) {
+      public Builder mergeHome(HomeDTO value) {
         if (homeBuilder_ == null) {
           if (home_ != null) {
             home_ =
-              org.bartos.core.protobuf.HomeDTO.newBuilder(home_).mergeFrom(value).buildPartial();
+              HomeDTO.newBuilder(home_).mergeFrom(value).buildPartial();
           } else {
             home_ = value;
           }
@@ -1133,7 +1133,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.home.HomeDTO home = 4;</code>
        */
-      public org.bartos.core.protobuf.HomeDTO.Builder getHomeBuilder() {
+      public HomeDTO.Builder getHomeBuilder() {
         
         onChanged();
         return getHomeFieldBuilder().getBuilder();
@@ -1141,23 +1141,23 @@ private static final long serialVersionUID = 0L;
       /**
        * <code>.home.HomeDTO home = 4;</code>
        */
-      public org.bartos.core.protobuf.HomeDTOOrBuilder getHomeOrBuilder() {
+      public HomeDTOOrBuilder getHomeOrBuilder() {
         if (homeBuilder_ != null) {
           return homeBuilder_.getMessageOrBuilder();
         } else {
           return home_ == null ?
-              org.bartos.core.protobuf.HomeDTO.getDefaultInstance() : home_;
+              HomeDTO.getDefaultInstance() : home_;
         }
       }
       /**
        * <code>.home.HomeDTO home = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          org.bartos.core.protobuf.HomeDTO, org.bartos.core.protobuf.HomeDTO.Builder, org.bartos.core.protobuf.HomeDTOOrBuilder> 
+              HomeDTO, HomeDTO.Builder, HomeDTOOrBuilder>
           getHomeFieldBuilder() {
         if (homeBuilder_ == null) {
           homeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.bartos.core.protobuf.HomeDTO, org.bartos.core.protobuf.HomeDTO.Builder, org.bartos.core.protobuf.HomeDTOOrBuilder>(
+                  HomeDTO, HomeDTO.Builder, HomeDTOOrBuilder>(
                   getHome(),
                   getParentForChildren(),
                   isClean());
@@ -1182,12 +1182,12 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(class_scope:home.HomeDTO.HomeInvitationDTO)
-    private static final org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO DEFAULT_INSTANCE;
+    private static final HomeDTO.HomeInvitationDTO DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO();
+      DEFAULT_INSTANCE = new HomeDTO.HomeInvitationDTO();
     }
 
-    public static org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getDefaultInstance() {
+    public static HomeDTO.HomeInvitationDTO getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1212,7 +1212,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getDefaultInstanceForType() {
+    public HomeDTO.HomeInvitationDTO getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1295,19 +1295,19 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ROOM_FIELD_NUMBER = 3;
-  private java.util.List<org.bartos.core.protobuf.RoomDTO> room_;
+  private java.util.List<RoomDTO> room_;
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<org.bartos.core.protobuf.RoomDTO> getRoomList() {
+  public java.util.List<RoomDTO> getRoomList() {
     return room_;
   }
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.bartos.core.protobuf.RoomDTOOrBuilder> 
+  public java.util.List<? extends RoomDTOOrBuilder>
       getRoomOrBuilderList() {
     return room_;
   }
@@ -1322,14 +1322,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
   @java.lang.Override
-  public org.bartos.core.protobuf.RoomDTO getRoom(int index) {
+  public RoomDTO getRoom(int index) {
     return room_.get(index);
   }
   /**
    * <code>repeated .home.RoomDTO room = 3;</code>
    */
   @java.lang.Override
-  public org.bartos.core.protobuf.RoomDTOOrBuilder getRoomOrBuilder(
+  public RoomDTOOrBuilder getRoomOrBuilder(
       int index) {
     return room_.get(index);
   }
@@ -1405,19 +1405,19 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVITATIONS_FIELD_NUMBER = 6;
-  private java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> invitations_;
+  private java.util.List<HomeDTO.HomeInvitationDTO> invitations_;
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
   @java.lang.Override
-  public java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> getInvitationsList() {
+  public java.util.List<HomeDTO.HomeInvitationDTO> getInvitationsList() {
     return invitations_;
   }
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder> 
+  public java.util.List<? extends HomeDTO.HomeInvitationDTOOrBuilder>
       getInvitationsOrBuilderList() {
     return invitations_;
   }
@@ -1432,14 +1432,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
   @java.lang.Override
-  public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getInvitations(int index) {
+  public HomeDTO.HomeInvitationDTO getInvitations(int index) {
     return invitations_.get(index);
   }
   /**
    * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
    */
   @java.lang.Override
-  public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
+  public HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
       int index) {
     return invitations_.get(index);
   }
@@ -1525,10 +1525,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.bartos.core.protobuf.HomeDTO)) {
+    if (!(obj instanceof HomeDTO)) {
       return super.equals(obj);
     }
-    org.bartos.core.protobuf.HomeDTO other = (org.bartos.core.protobuf.HomeDTO) obj;
+    HomeDTO other = (HomeDTO) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -1578,69 +1578,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(byte[] data)
+  public static HomeDTO parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(java.io.InputStream input)
+  public static HomeDTO parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseDelimitedFrom(java.io.InputStream input)
+  public static HomeDTO parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseDelimitedFrom(
+  public static HomeDTO parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.HomeDTO parseFrom(
+  public static HomeDTO parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1653,7 +1653,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.bartos.core.protobuf.HomeDTO prototype) {
+  public static Builder newBuilder(HomeDTO prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -1674,18 +1674,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:home.HomeDTO)
-      org.bartos.core.protobuf.HomeDTOOrBuilder {
+          HomeDTOOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_descriptor;
+      return HomeProto.internal_static_home_HomeDTO_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_fieldAccessorTable
+      return HomeProto.internal_static_home_HomeDTO_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.bartos.core.protobuf.HomeDTO.class, org.bartos.core.protobuf.HomeDTO.Builder.class);
+              HomeDTO.class, HomeDTO.Builder.class);
     }
 
     // Construct using org.bartos.core.protobuf.HomeDTO.newBuilder()
@@ -1734,17 +1734,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_HomeDTO_descriptor;
+      return HomeProto.internal_static_home_HomeDTO_descriptor;
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTO getDefaultInstanceForType() {
-      return org.bartos.core.protobuf.HomeDTO.getDefaultInstance();
+    public HomeDTO getDefaultInstanceForType() {
+      return HomeDTO.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTO build() {
-      org.bartos.core.protobuf.HomeDTO result = buildPartial();
+    public HomeDTO build() {
+      HomeDTO result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -1752,8 +1752,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.HomeDTO buildPartial() {
-      org.bartos.core.protobuf.HomeDTO result = new org.bartos.core.protobuf.HomeDTO(this);
+    public HomeDTO buildPartial() {
+      HomeDTO result = new HomeDTO(this);
       int from_bitField0_ = bitField0_;
       result.id_ = id_;
       result.name_ = name_;
@@ -1823,16 +1823,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.bartos.core.protobuf.HomeDTO) {
-        return mergeFrom((org.bartos.core.protobuf.HomeDTO)other);
+      if (other instanceof HomeDTO) {
+        return mergeFrom((HomeDTO)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.bartos.core.protobuf.HomeDTO other) {
-      if (other == org.bartos.core.protobuf.HomeDTO.getDefaultInstance()) return this;
+    public Builder mergeFrom(HomeDTO other) {
+      if (other == HomeDTO.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         onChanged();
@@ -1928,11 +1928,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.bartos.core.protobuf.HomeDTO parsedMessage = null;
+      HomeDTO parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.bartos.core.protobuf.HomeDTO) e.getUnfinishedMessage();
+        parsedMessage = (HomeDTO) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -2095,22 +2095,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<org.bartos.core.protobuf.RoomDTO> room_ =
+    private java.util.List<RoomDTO> room_ =
       java.util.Collections.emptyList();
     private void ensureRoomIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        room_ = new java.util.ArrayList<org.bartos.core.protobuf.RoomDTO>(room_);
+        room_ = new java.util.ArrayList<RoomDTO>(room_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.bartos.core.protobuf.RoomDTO, org.bartos.core.protobuf.RoomDTO.Builder, org.bartos.core.protobuf.RoomDTOOrBuilder> roomBuilder_;
+            RoomDTO, RoomDTO.Builder, RoomDTOOrBuilder> roomBuilder_;
 
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public java.util.List<org.bartos.core.protobuf.RoomDTO> getRoomList() {
+    public java.util.List<RoomDTO> getRoomList() {
       if (roomBuilder_ == null) {
         return java.util.Collections.unmodifiableList(room_);
       } else {
@@ -2130,7 +2130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public org.bartos.core.protobuf.RoomDTO getRoom(int index) {
+    public RoomDTO getRoom(int index) {
       if (roomBuilder_ == null) {
         return room_.get(index);
       } else {
@@ -2141,7 +2141,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder setRoom(
-        int index, org.bartos.core.protobuf.RoomDTO value) {
+        int index, RoomDTO value) {
       if (roomBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2158,7 +2158,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder setRoom(
-        int index, org.bartos.core.protobuf.RoomDTO.Builder builderForValue) {
+        int index, RoomDTO.Builder builderForValue) {
       if (roomBuilder_ == null) {
         ensureRoomIsMutable();
         room_.set(index, builderForValue.build());
@@ -2171,7 +2171,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public Builder addRoom(org.bartos.core.protobuf.RoomDTO value) {
+    public Builder addRoom(RoomDTO value) {
       if (roomBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2188,7 +2188,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder addRoom(
-        int index, org.bartos.core.protobuf.RoomDTO value) {
+        int index, RoomDTO value) {
       if (roomBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder addRoom(
-        org.bartos.core.protobuf.RoomDTO.Builder builderForValue) {
+        RoomDTO.Builder builderForValue) {
       if (roomBuilder_ == null) {
         ensureRoomIsMutable();
         room_.add(builderForValue.build());
@@ -2219,7 +2219,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder addRoom(
-        int index, org.bartos.core.protobuf.RoomDTO.Builder builderForValue) {
+        int index, RoomDTO.Builder builderForValue) {
       if (roomBuilder_ == null) {
         ensureRoomIsMutable();
         room_.add(index, builderForValue.build());
@@ -2233,10 +2233,10 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
     public Builder addAllRoom(
-        java.lang.Iterable<? extends org.bartos.core.protobuf.RoomDTO> values) {
+        java.lang.Iterable<? extends RoomDTO> values) {
       if (roomBuilder_ == null) {
         ensureRoomIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        addAll(
             values, room_);
         onChanged();
       } else {
@@ -2273,14 +2273,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public org.bartos.core.protobuf.RoomDTO.Builder getRoomBuilder(
+    public RoomDTO.Builder getRoomBuilder(
         int index) {
       return getRoomFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public org.bartos.core.protobuf.RoomDTOOrBuilder getRoomOrBuilder(
+    public RoomDTOOrBuilder getRoomOrBuilder(
         int index) {
       if (roomBuilder_ == null) {
         return room_.get(index);  } else {
@@ -2290,7 +2290,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public java.util.List<? extends org.bartos.core.protobuf.RoomDTOOrBuilder> 
+    public java.util.List<? extends RoomDTOOrBuilder>
          getRoomOrBuilderList() {
       if (roomBuilder_ != null) {
         return roomBuilder_.getMessageOrBuilderList();
@@ -2301,31 +2301,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public org.bartos.core.protobuf.RoomDTO.Builder addRoomBuilder() {
+    public RoomDTO.Builder addRoomBuilder() {
       return getRoomFieldBuilder().addBuilder(
-          org.bartos.core.protobuf.RoomDTO.getDefaultInstance());
+          RoomDTO.getDefaultInstance());
     }
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public org.bartos.core.protobuf.RoomDTO.Builder addRoomBuilder(
+    public RoomDTO.Builder addRoomBuilder(
         int index) {
       return getRoomFieldBuilder().addBuilder(
-          index, org.bartos.core.protobuf.RoomDTO.getDefaultInstance());
+          index, RoomDTO.getDefaultInstance());
     }
     /**
      * <code>repeated .home.RoomDTO room = 3;</code>
      */
-    public java.util.List<org.bartos.core.protobuf.RoomDTO.Builder> 
+    public java.util.List<RoomDTO.Builder>
          getRoomBuilderList() {
       return getRoomFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.bartos.core.protobuf.RoomDTO, org.bartos.core.protobuf.RoomDTO.Builder, org.bartos.core.protobuf.RoomDTOOrBuilder> 
+            RoomDTO, RoomDTO.Builder, RoomDTOOrBuilder>
         getRoomFieldBuilder() {
       if (roomBuilder_ == null) {
         roomBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.bartos.core.protobuf.RoomDTO, org.bartos.core.protobuf.RoomDTO.Builder, org.bartos.core.protobuf.RoomDTOOrBuilder>(
+                RoomDTO, RoomDTO.Builder, RoomDTOOrBuilder>(
                 room_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -2555,22 +2555,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> invitations_ =
+    private java.util.List<HomeDTO.HomeInvitationDTO> invitations_ =
       java.util.Collections.emptyList();
     private void ensureInvitationsIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        invitations_ = new java.util.ArrayList<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO>(invitations_);
+        invitations_ = new java.util.ArrayList<HomeDTO.HomeInvitationDTO>(invitations_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder> invitationsBuilder_;
+        HomeDTO.HomeInvitationDTO, HomeDTO.HomeInvitationDTO.Builder, HomeDTO.HomeInvitationDTOOrBuilder> invitationsBuilder_;
 
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> getInvitationsList() {
+    public java.util.List<HomeDTO.HomeInvitationDTO> getInvitationsList() {
       if (invitationsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(invitations_);
       } else {
@@ -2590,7 +2590,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO getInvitations(int index) {
+    public HomeDTO.HomeInvitationDTO getInvitations(int index) {
       if (invitationsBuilder_ == null) {
         return invitations_.get(index);
       } else {
@@ -2601,7 +2601,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder setInvitations(
-        int index, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO value) {
+        int index, HomeDTO.HomeInvitationDTO value) {
       if (invitationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2618,7 +2618,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder setInvitations(
-        int index, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder builderForValue) {
+        int index, HomeDTO.HomeInvitationDTO.Builder builderForValue) {
       if (invitationsBuilder_ == null) {
         ensureInvitationsIsMutable();
         invitations_.set(index, builderForValue.build());
@@ -2631,7 +2631,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public Builder addInvitations(org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO value) {
+    public Builder addInvitations(HomeDTO.HomeInvitationDTO value) {
       if (invitationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2648,7 +2648,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder addInvitations(
-        int index, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO value) {
+        int index, HomeDTO.HomeInvitationDTO value) {
       if (invitationsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2665,7 +2665,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder addInvitations(
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder builderForValue) {
+        HomeDTO.HomeInvitationDTO.Builder builderForValue) {
       if (invitationsBuilder_ == null) {
         ensureInvitationsIsMutable();
         invitations_.add(builderForValue.build());
@@ -2679,7 +2679,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder addInvitations(
-        int index, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder builderForValue) {
+        int index, HomeDTO.HomeInvitationDTO.Builder builderForValue) {
       if (invitationsBuilder_ == null) {
         ensureInvitationsIsMutable();
         invitations_.add(index, builderForValue.build());
@@ -2693,7 +2693,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
     public Builder addAllInvitations(
-        java.lang.Iterable<? extends org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO> values) {
+        java.lang.Iterable<? extends HomeDTO.HomeInvitationDTO> values) {
       if (invitationsBuilder_ == null) {
         ensureInvitationsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2733,14 +2733,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder getInvitationsBuilder(
+    public HomeDTO.HomeInvitationDTO.Builder getInvitationsBuilder(
         int index) {
       return getInvitationsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
+    public HomeDTO.HomeInvitationDTOOrBuilder getInvitationsOrBuilder(
         int index) {
       if (invitationsBuilder_ == null) {
         return invitations_.get(index);  } else {
@@ -2750,7 +2750,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public java.util.List<? extends org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder> 
+    public java.util.List<? extends HomeDTO.HomeInvitationDTOOrBuilder>
          getInvitationsOrBuilderList() {
       if (invitationsBuilder_ != null) {
         return invitationsBuilder_.getMessageOrBuilderList();
@@ -2761,31 +2761,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder addInvitationsBuilder() {
+    public HomeDTO.HomeInvitationDTO.Builder addInvitationsBuilder() {
       return getInvitationsFieldBuilder().addBuilder(
-          org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.getDefaultInstance());
+          HomeDTO.HomeInvitationDTO.getDefaultInstance());
     }
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder addInvitationsBuilder(
+    public HomeDTO.HomeInvitationDTO.Builder addInvitationsBuilder(
         int index) {
       return getInvitationsFieldBuilder().addBuilder(
-          index, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.getDefaultInstance());
+          index, HomeDTO.HomeInvitationDTO.getDefaultInstance());
     }
     /**
      * <code>repeated .home.HomeDTO.HomeInvitationDTO invitations = 6;</code>
      */
-    public java.util.List<org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder> 
+    public java.util.List<HomeDTO.HomeInvitationDTO.Builder>
          getInvitationsBuilderList() {
       return getInvitationsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder> 
+        HomeDTO.HomeInvitationDTO, HomeDTO.HomeInvitationDTO.Builder, HomeDTO.HomeInvitationDTOOrBuilder>
         getInvitationsFieldBuilder() {
       if (invitationsBuilder_ == null) {
         invitationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTO.Builder, org.bartos.core.protobuf.HomeDTO.HomeInvitationDTOOrBuilder>(
+            HomeDTO.HomeInvitationDTO, HomeDTO.HomeInvitationDTO.Builder, HomeDTO.HomeInvitationDTOOrBuilder>(
                 invitations_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
@@ -2811,12 +2811,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:home.HomeDTO)
-  private static final org.bartos.core.protobuf.HomeDTO DEFAULT_INSTANCE;
+  private static final HomeDTO DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.bartos.core.protobuf.HomeDTO();
+    DEFAULT_INSTANCE = new HomeDTO();
   }
 
-  public static org.bartos.core.protobuf.HomeDTO getDefaultInstance() {
+  public static HomeDTO getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -2841,7 +2841,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public org.bartos.core.protobuf.HomeDTO getDefaultInstanceForType() {
+  public HomeDTO getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -111,15 +111,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.bartos.core.protobuf.HomeProto.internal_static_home_RoomDTO_descriptor;
+    return HomeProto.internal_static_home_RoomDTO_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.bartos.core.protobuf.HomeProto.internal_static_home_RoomDTO_fieldAccessorTable
+    return HomeProto.internal_static_home_RoomDTO_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.bartos.core.protobuf.RoomDTO.class, org.bartos.core.protobuf.RoomDTO.Builder.class);
+            RoomDTO.class, RoomDTO.Builder.class);
   }
 
   /**
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return org.bartos.core.protobuf.RoomDTO.getDescriptor().getEnumTypes().get(0);
+      return RoomDTO.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final RoomType[] VALUES = values();
@@ -364,10 +364,10 @@ private static final long serialVersionUID = 0L;
    * <code>.home.RoomDTO.RoomType type = 3;</code>
    * @return The type.
    */
-  @java.lang.Override public org.bartos.core.protobuf.RoomDTO.RoomType getType() {
+  @java.lang.Override public RoomDTO.RoomType getType() {
     @SuppressWarnings("deprecation")
-    org.bartos.core.protobuf.RoomDTO.RoomType result = org.bartos.core.protobuf.RoomDTO.RoomType.valueOf(type_);
-    return result == null ? org.bartos.core.protobuf.RoomDTO.RoomType.UNRECOGNIZED : result;
+    RoomDTO.RoomType result = RoomDTO.RoomType.valueOf(type_);
+    return result == null ? RoomDTO.RoomType.UNRECOGNIZED : result;
   }
 
   public static final int HOME_ID_FIELD_NUMBER = 4;
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (type_ != org.bartos.core.protobuf.RoomDTO.RoomType.NONE.getNumber()) {
+    if (type_ != RoomDTO.RoomType.NONE.getNumber()) {
       output.writeEnum(3, type_);
     }
     if (!getHomeIdBytes().isEmpty()) {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (type_ != org.bartos.core.protobuf.RoomDTO.RoomType.NONE.getNumber()) {
+    if (type_ != RoomDTO.RoomType.NONE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, type_);
     }
@@ -512,10 +512,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.bartos.core.protobuf.RoomDTO)) {
+    if (!(obj instanceof RoomDTO)) {
       return super.equals(obj);
     }
-    org.bartos.core.protobuf.RoomDTO other = (org.bartos.core.protobuf.RoomDTO) obj;
+    RoomDTO other = (RoomDTO) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -554,69 +554,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(byte[] data)
+  public static RoomDTO parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(java.io.InputStream input)
+  public static RoomDTO parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseDelimitedFrom(java.io.InputStream input)
+  public static RoomDTO parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseDelimitedFrom(
+  public static RoomDTO parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.bartos.core.protobuf.RoomDTO parseFrom(
+  public static RoomDTO parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.bartos.core.protobuf.RoomDTO prototype) {
+  public static Builder newBuilder(RoomDTO prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -650,18 +650,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:home.RoomDTO)
-      org.bartos.core.protobuf.RoomDTOOrBuilder {
+          RoomDTOOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_RoomDTO_descriptor;
+      return HomeProto.internal_static_home_RoomDTO_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_RoomDTO_fieldAccessorTable
+      return HomeProto.internal_static_home_RoomDTO_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.bartos.core.protobuf.RoomDTO.class, org.bartos.core.protobuf.RoomDTO.Builder.class);
+              RoomDTO.class, RoomDTO.Builder.class);
     }
 
     // Construct using org.bartos.core.protobuf.RoomDTO.newBuilder()
@@ -698,17 +698,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.bartos.core.protobuf.HomeProto.internal_static_home_RoomDTO_descriptor;
+      return HomeProto.internal_static_home_RoomDTO_descriptor;
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.RoomDTO getDefaultInstanceForType() {
-      return org.bartos.core.protobuf.RoomDTO.getDefaultInstance();
+    public RoomDTO getDefaultInstanceForType() {
+      return RoomDTO.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.RoomDTO build() {
-      org.bartos.core.protobuf.RoomDTO result = buildPartial();
+    public RoomDTO build() {
+      RoomDTO result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -716,8 +716,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.bartos.core.protobuf.RoomDTO buildPartial() {
-      org.bartos.core.protobuf.RoomDTO result = new org.bartos.core.protobuf.RoomDTO(this);
+    public RoomDTO buildPartial() {
+      RoomDTO result = new RoomDTO(this);
       int from_bitField0_ = bitField0_;
       result.id_ = id_;
       result.name_ = name_;
@@ -766,16 +766,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.bartos.core.protobuf.RoomDTO) {
-        return mergeFrom((org.bartos.core.protobuf.RoomDTO)other);
+      if (other instanceof RoomDTO) {
+        return mergeFrom((RoomDTO)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.bartos.core.protobuf.RoomDTO other) {
-      if (other == org.bartos.core.protobuf.RoomDTO.getDefaultInstance()) return this;
+    public Builder mergeFrom(RoomDTO other) {
+      if (other == RoomDTO.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         onChanged();
@@ -816,11 +816,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.bartos.core.protobuf.RoomDTO parsedMessage = null;
+      RoomDTO parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.bartos.core.protobuf.RoomDTO) e.getUnfinishedMessage();
+        parsedMessage = (RoomDTO) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -1007,17 +1007,17 @@ private static final long serialVersionUID = 0L;
      * @return The type.
      */
     @java.lang.Override
-    public org.bartos.core.protobuf.RoomDTO.RoomType getType() {
+    public RoomDTO.RoomType getType() {
       @SuppressWarnings("deprecation")
-      org.bartos.core.protobuf.RoomDTO.RoomType result = org.bartos.core.protobuf.RoomDTO.RoomType.valueOf(type_);
-      return result == null ? org.bartos.core.protobuf.RoomDTO.RoomType.UNRECOGNIZED : result;
+      RoomDTO.RoomType result = RoomDTO.RoomType.valueOf(type_);
+      return result == null ? RoomDTO.RoomType.UNRECOGNIZED : result;
     }
     /**
      * <code>.home.RoomDTO.RoomType type = 3;</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
-    public Builder setType(org.bartos.core.protobuf.RoomDTO.RoomType value) {
+    public Builder setType(RoomDTO.RoomType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1239,12 +1239,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:home.RoomDTO)
-  private static final org.bartos.core.protobuf.RoomDTO DEFAULT_INSTANCE;
+  private static final RoomDTO DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.bartos.core.protobuf.RoomDTO();
+    DEFAULT_INSTANCE = new RoomDTO();
   }
 
-  public static org.bartos.core.protobuf.RoomDTO getDefaultInstance() {
+  public static RoomDTO getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -1269,7 +1269,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public org.bartos.core.protobuf.RoomDTO getDefaultInstanceForType() {
+  public RoomDTO getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

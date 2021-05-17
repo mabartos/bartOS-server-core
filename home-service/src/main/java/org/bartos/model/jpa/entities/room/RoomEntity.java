@@ -2,6 +2,7 @@ package org.bartos.model.jpa.entities.room;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import org.bartos.model.RoomType;
 import org.bartos.model.jpa.entities.home.HomeEntity;
 
 import javax.persistence.Cacheable;
@@ -27,9 +28,11 @@ import java.util.Set;
 @Cacheable
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NamedQueries({
-        @NamedQuery(name = "getRoomByID", query = "select room from RoomEntity room join fetch room.home join fetch room.devices where room.id=:id"),
-        @NamedQuery(name = "deleteRoomByID", query = "delete from RoomEntity where id=:id"),
-        @NamedQuery(name = "deleteRoomsFromHome", query = "delete from RoomEntity where home.id=:homeID")
+        @NamedQuery(name = "getRoomByID", query = "select room from RoomEntity room where room.id=:id and room.home.id=:homeID"),
+        @NamedQuery(name = "getAllRooms", query = "select room from RoomEntity room  where room.home.id=:homeID"),
+        @NamedQuery(name = "deleteRoomByID", query = "delete from RoomEntity where id=:id and home.id=:homeID"),
+        @NamedQuery(name = "deleteRoomsFromHome", query = "delete from RoomEntity where home.id=:homeID"),
+        @NamedQuery(name = "getCountOfRooms", query = "select count(room) from RoomEntity room where room.home.id=:homeID")
 })
 public class RoomEntity extends PanacheEntityBase {
 

@@ -1,7 +1,5 @@
 package org.bartos.model;
 
-import org.bartos.model.jpa.entities.room.RoomType;
-
 import java.util.stream.Stream;
 
 public interface RoomModel {
